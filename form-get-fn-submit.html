@@ -1,0 +1,19 @@
+<form id="form" action="login.html?type=fn-submit" onsubmit="submit()" method="GET">
+
+    <label for="username">First name:</label><br>
+    <input type="text" id="username" name="username" value="John"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" value=""><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+<script>
+function submit() {
+
+  alert('submit called');
+  
+  document.getElementById('form').submit();
+
+}
+</script>
+
