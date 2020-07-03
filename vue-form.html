@@ -20,7 +20,7 @@
                 {{pass}}
             </el-dialog>
 
-            <el-dialog :visible.sync="submit" title="form submited">
+            <el-dialog :visible.sync="submited" title="form submited">
                 {{user}}
                 {{pass}}
             </el-dialog>
@@ -39,10 +39,16 @@
         data: function () {
             return {
                 visible: false,
-                submit: false,
+                submited: false,
                 user: '',
                 pass: ''
 
+            }
+        },
+        methods: {
+            submit() {
+                this.submited = true;
+                return false;
             }
         }
     })
