@@ -9,13 +9,18 @@
 
 <body>
     <div id="app">
-        <el-form>
+        <el-form @submit='submit = ture'>
             <el-input v-model="user" placeholder="请输入用户"></el-input>
             <el-input v-model="pass" placeholder="请输入密码" show-password></el-input>
 
             <el-button @click="visible = true">Button</el-button>
 
-            <el-dialog :visible.sync="visible" title="Hello world">
+            <el-dialog :visible.sync="visible" title="button clicked">
+                {{user}}
+                {{pass}}
+            </el-dialog>
+
+            <el-dialog :visible.sync="submit" title="form submited">
                 {{user}}
                 {{pass}}
             </el-dialog>
@@ -34,6 +39,7 @@
         data: function () {
             return {
                 visible: false,
+                submit: false,
                 user: '',
                 pass: ''
 
