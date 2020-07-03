@@ -13,7 +13,7 @@
         <el-form>
             <el-input v-model="uid" placeholder="请输入UID"></el-input>
             <el-input v-model="user" placeholder="请输入用户"></el-input>
-            <el-input v-model="pass" placeholder="请输入密码"></el-input>
+            <el-input v-model="pass" placeholder="请输入密码" show-password></el-input>
             <el-link type="primary" @click="forget = true">forget password?</el-link>
 
             <el-button @click="formSubmit">submit</el-button>
