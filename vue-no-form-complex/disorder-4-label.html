@@ -21,8 +21,8 @@
             </li>
             <li>
 
-                <span>工号</span>
-                <el-input id="num" v-model="num" placeholder="请输入ID"></el-input>
+                <span>原因</span>
+                <el-input id="res" v-model="res" placeholder="请输入原因"></el-input>
             </li>
             <li>
                 <span>密码</span>
@@ -65,6 +65,8 @@
                 visible: false,
                 reg: false,
                 forget: false,
+                res: '',
+                dep: '',
                 uid: '',
                 user: '',
                 pass: ''
