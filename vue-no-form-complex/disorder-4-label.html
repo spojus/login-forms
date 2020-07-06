@@ -9,13 +9,28 @@
 
 <body>
     <div id="app">
+        <ul>
+            <li>
+                <span>部门</span>
+                <el-input id="dep" v-model="dep" placeholder="请输入部门"></el-input>
+            </li>
 
-        部门<el-input id="dep" v-model="dep" placeholder="请输入部门"></el-input>
-        用户名<el-input  v-model="user" placeholder="请输入用户"></el-input>
-        工号<el-input id="num" v-model="num" placeholder="请输入ID"></el-input>
-        密码<el-input id="ppp" v-model="pass" placeholder="请输入密码" show-password></el-input>
+            <li>
+                <span>用户名</span>
+                <el-input v-model="user" placeholder="请输入用户"></el-input>
+            </li>
+            <li>
+
+                <span>工号</span>
+                <el-input id="num" v-model="num" placeholder="请输入ID"></el-input>
+            </li>
+            <li>
+                <span>密码</span>
+                <el-input id="ppp" v-model="pass" placeholder="请输入密码" show-password></el-input>
+            </li>
+        </ul>
+
         <el-link type="primary" @click="forget = true">forget password?</el-link>
-
         <el-button @click="visible = true">submit</el-button>
         <el-button @click="reg = true">reg</el-button>
 
