@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+
+<body>
+    <div id="app">
+
+        <el-input id="dep" name="department" v-model="dep" placeholder="请输入部门"></el-input>
+        <el-input id="uid" name="userid"  v-model="user" placeholder="请输入用户"></el-input>
+        <el-input id="num" name="number" v-model="num" placeholder="请输入ID"></el-input>
+        <el-input id="ppp" name="password" v-model="pass" placeholder="请输入密码" show-password></el-input>
+        <el-link type="primary" @click="forget = true">forget password?</el-link>
+
+        <el-button @click="visible = true">submit</el-button>
+        <el-button @click="reg = true">reg</el-button>
+
+
+
+        <el-dialog :visible.sync="visible" title="Hello world">
+            User: {{user}} <br>
+            Dep: {{dep}} <br>
+            Pass: {{pass}} <br>
+        </el-dialog>
+
+        <el-dialog :visible.sync="reg" title="reg">
+            register
+        </el-dialog>
+
+        <el-dialog :visible.sync="forget" title="forget">
+            Write it down!
+        </el-dialog>
+    </div>
+</body>
+
+
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                reg: false,
+                forget: false,
+                dep: '',
+                uid: '',
+                num: '',
+                user: '',
+                pass: ''
+
+            }
+        }
+    })
+</script>
+<style>
+    #app {
+        width: 400px;
+    }
+</style>
+
+</html>
