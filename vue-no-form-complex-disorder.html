@@ -10,21 +10,21 @@
 <body>
     <div id="app">
 
-        
-        <el-input v-model="uid" placeholder="请输入UID"></el-input>
+
         <el-input v-model="user" placeholder="请输入用户"></el-input>
+        <el-input v-model="uid" placeholder="请输入UID"></el-input>
         <el-input v-model="pass" placeholder="请输入密码" show-password></el-input>
         <el-link type="primary" @click="forget = true">forget password?</el-link>
 
         <el-button @click="visible = true">submit</el-button>
         <el-button @click="reg = true">reg</el-button>
-    
+
 
 
         <el-dialog :visible.sync="visible" title="Hello world">
-           UID: {{uid}} <br>
-           User: {{user}} <br>
-           Pass: {{pass}} <br>
+            User: {{user}} <br>
+            UID: {{uid}} <br>
+            Pass: {{pass}} <br>
         </el-dialog>
 
         <el-dialog :visible.sync="reg" title="reg">
@@ -59,8 +59,9 @@
     })
 </script>
 <style>
-    #app{
+    #app {
         width: 400px;
     }
 </style>
+
 </html>
